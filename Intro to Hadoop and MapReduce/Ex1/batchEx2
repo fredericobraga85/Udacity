@@ -1,0 +1,7 @@
+#!/bin/bash
+echo Inicio - verificar se arquivos possuem permissao
+
+
+hadoop jar /usr/lib/hadoop-0.20-mapreduce/contrib/streaming/hadoop-streaming-2.6.0-mr1-cdh5.8.0.jar -mapper ~/Desktop/mapper.py -reducer ~/Desktop/reducer.py -input myinput -output myoutput -file ~/Desktop/mapper.py -file ~/Desktop/reducer.py 
+
+exit

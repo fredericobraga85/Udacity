@@ -1,0 +1,4 @@
+#!/bin/bash
+echo Inicio - rode no diretorio local
+cat testFile | mapper.py | sort | reducer.py
+exit

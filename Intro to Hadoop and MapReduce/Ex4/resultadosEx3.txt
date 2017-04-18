@@ -1,0 +1,3 @@
+Chandler	414.08
+Reno	88.25
+Toledo	59.08

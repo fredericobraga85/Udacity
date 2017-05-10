@@ -1,0 +1,13 @@
+https://www.continuum.io/downloads.
+
+conda list
+
+conda upgrade conda
+conda upgrade --all
+
+conda install jupyter notebook
+
+conda create -n py2 python=2
+source activate py2
+
+jupyter notebook

@@ -1,0 +1,47 @@
+Estudo Networking
+
+- Install Varant and Virtual Box
+
+- Rodar VM in vagrant:
+	
+	mkdir networking
+	cd networking
+	vagrant init ubuntu/trusty64
+	vagrant up
+
+- Log in Linux instance
+	vagrant ssh
+
+- Update tools
+	sudo apt-get update && sudo apt-get upgrade
+
+- Install network tools
+	sudo apt-get install netcat-openbsd tcpdump traceroute mtr
+
+- Some commands
+	ip addr show eth0
+	ip route show
+	ping -c3 8.8.8.8
+	host -t aaaa google.com
+	host -t mx udacity.com
+	tcpdump -n -c5 -i eth0 port 22
+	traceroute www.udacity.com
+	mtr www.udacity.com
+	printf 'HEAD / HTTP/1.1\r\nHost: www.google.com\r\n\r\n' | nc www.google.com 80
+
+- List open files and network
+	sudo lsof
+	sudo lsof -i
+
+- Details similar to host
+	dig www.google.com
+
+- see local interfaces
+	ip addr show
+
+- see default gateway
+	ip route show default (linux)
+	netstat -nr (mac)
+
+- follow routes
+	traceroute google.com

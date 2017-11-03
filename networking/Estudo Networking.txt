@@ -45,3 +45,43 @@ Estudo Networking
 
 - follow routes
 	traceroute google.com
+
+- change $PATH
+	https://askubuntu.com/questions/60218/how-to-add-a-directory-to-the-path
+
+- search for packages
+	packages.ubuntu.com
+
+- add user
+	sudo adduser student
+
+- generate private key
+	ssh-keygen
+
+- save key in server
+	 mkdir ~/.ssh
+	 touch .ssh/authorized_keys
+	 (local machine) cat {your_key}.pub
+	 sudo nano .ssh/authorized_keys
+	 (paste key.pub)
+	 chmod 700 .ssh
+	 chmod 644 .ssh/authorized_keys
+	 ssh student@127.0.0.1 -p 2222 -i /Users/cinq/Documents/Udacity/networking/key
+
+- disable password
+	sudo nano /etc/ssh/sshd_config
+	(change PasswordAuthentication no )
+	sudo service ssh restart
+
+- change owner and group
+	chown chgrp
+
+- firewall
+	sudo ufw status
+	sudo ufw default deny incoming
+	sudo ufw default allow outgoing
+	sudo ufw allow ssh
+	sudo ufw allow 2222/tcp (vagrant)
+	sudo ufw allow www
+	sudo ufw enable
+	sudo ufw status
